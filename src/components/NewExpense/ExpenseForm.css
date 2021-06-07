@@ -1,0 +1,52 @@
+.new_expense__controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.new_expense__control {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.new-expense__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.new_expense__control label {
+  padding-right: 10px;
+}
+
+.new_expense__control input {
+  border: 1px solid rgba(0, 0, 0, 0.171);
+  border-radius: 4px;
+  height: 30px;
+  width: 200px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.new_expense__control input[type=date] {
+  text-align: center;
+}
+
+.new_expense__control input:focus {
+  outline: none;
+}
+
+/* .new-expense__control label {
+  font-weight: bold;
+  padding-right: 20px;
+  display: block;
+} */
+
+
+.new-expense__actions {
+  text-align: right;
+}

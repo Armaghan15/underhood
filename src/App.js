@@ -2,6 +2,7 @@ import React from "react";
 
 // Importing external files
 import ExpenseItems from "./components/ExpenseItems/ExpenseItems";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 const expenses = [
   {
@@ -25,13 +26,19 @@ const expenses = [
   },
 ];
 
-function App() {
+const addExpenseHandler = (expense) => {
+  console.log("In App.js");
+  console.log(expense);
+};
+
+const App = () => {
   return (
     <div>
       <h2 className="site-heading">UnderHood</h2>
+      <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
       <ExpenseItems expensesData={expenses}></ExpenseItems>
     </div>
   );
-}
+};
 
 export default App;
