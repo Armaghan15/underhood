@@ -50,3 +50,7 @@
 .new-expense__actions {
   text-align: right;
 }
+
+.new-expense-button {
+  background-color: #fff;
+}

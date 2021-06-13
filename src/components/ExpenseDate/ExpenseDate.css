@@ -6,3 +6,16 @@
 .date div {
   margin: 2px;
 }
+
+.day {
+  display: flex;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+}
+
+.day .number-extension {
+  font-size: 13px;
+}

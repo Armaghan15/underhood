@@ -6,7 +6,7 @@ import Card from "../UI/Card/Card";
 
 const ExpenseItem = (props) => {
   const [title, setTitle] = useState(props.title);
-  const [amount, setAmount] = useState(props.amount);
+  const [price, setPrice] = useState(props.price);
 
   const titleChangeHandler = () => {
     let newTitleFromUser = prompt("Please enter a new title", title);
@@ -14,24 +14,26 @@ const ExpenseItem = (props) => {
     // console.log(title);
   };
 
-  const amountChangeHandler = () => {
-    let newAmountFromUser = prompt("New Amount: ", amount);
-    setAmount(newAmountFromUser);
+  const priceChangeHandler = () => {
+    let newPriceFromUser = prompt("New Price: ", price);
+    setPrice(newPriceFromUser);
   };
 
   return (
-    <Card className="expense-item">
-      <ExpenseDate date={props.date}></ExpenseDate>
-      <div className="expense-item__description">
-        <h2>{title}</h2>
-        <div onClick={amountChangeHandler} className="expense-item__price">
-          ${amount}
+    <li>
+      <Card className="expense-item">
+        <ExpenseDate date={props.date}></ExpenseDate>
+        <div className="expense-item__description">
+          <h2>{title}</h2>
+          <div onClick={priceChangeHandler} className="expense-item__price">
+            ${price}
+          </div>
         </div>
-      </div>
-      <button onClick={titleChangeHandler} className="expense-item__button">
-        Change Title
-      </button>
-    </Card>
+        <button onClick={titleChangeHandler} className="expense-item__button">
+          Change Title
+        </button>
+      </Card>
+    </li>
   );
 };
 export default ExpenseItem;
